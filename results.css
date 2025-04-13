@@ -1,0 +1,145 @@
+body {
+    font-family: sans-serif;
+    width: 420px; /* Match popup width minus padding */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 1.2em;
+    margin-top: 0;
+    text-align: center;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap; /* Allow controls to wrap */
+    gap: 10px; /* Spacing between controls */
+    margin-bottom: 15px;
+    align-items: center; /* Align items vertically */
+    justify-content: center; /* Center controls */
+}
+
+.controls button {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* --- ADDED STYLES --- */
+.delimiter-control {
+    display: flex; /* Align label and select side-by-side */
+    align-items: center; /* Vertically align label and select */
+    gap: 5px; /* Space between label and select */
+}
+
+#delimiterSelect {
+    padding: 4px; /* Match button padding slightly */
+    font-size: inherit; /* Use body font size */
+}
+/* --- END ADDED STYLES --- */
+
+/* (Keep existing styles for instructions, table, etc.) */
+
+body {
+    font-family: sans-serif;
+    /* Adjust width to match new popup width minus padding */
+    width: 570px; /* e.g., 600px width - 2*15px padding */
+    padding: 15px; /* Maybe slightly more padding for larger window */
+    box-sizing: border-box;
+}
+
+.instructions {
+    font-size: 0.9em;
+    color: #555;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#resultsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+#resultsTable th,
+#resultsTable td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+    word-break: break-word; /* Prevent long text from overflowing */
+
+    /* --- ADDED RULE TO PREVENT TEXT SELECTION --- */
+    user-select: none; /* Standard */
+    -webkit-user-select: none; /* Safari, Chrome, Opera */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE/Edge */
+    /* --- END ADDED RULE --- */
+}
+
+/* (Keep existing styles for th, tbody tr, hover, selected etc.) */
+#resultsTable th {
+    background-color: #f2f2f2;
+}
+
+#resultsTable tbody tr {
+    cursor: pointer;
+}
+
+#resultsTable tbody tr:hover {
+    background-color: #f0f0f0;
+}
+
+#resultsTable tbody tr.selected {
+    background-color: #aae;
+    color: white;
+}
+#resultsTable tbody tr.selected td{ /* Ensure selected text remains unselectable */
+     user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+#resultsTable tbody tr.selected:hover {
+    background-color: #88c;
+}
+
+/* (Keep other styles like body, controls, etc.) */
+body {
+    font-family: sans-serif;
+    width: 570px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.controls button {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.delimiter-control {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#delimiterSelect {
+    padding: 4px;
+    font-size: inherit;
+}
+
+.instructions {
+    font-size: 0.9em;
+    color: #555;
+    text-align: center;
+    margin-bottom: 10px;
+}

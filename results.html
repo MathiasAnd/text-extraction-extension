@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Extracted Text</title>
+    <link rel="stylesheet" href="results.css">
+</head>
+<body>
+    <h1>Extracted Text Parts</h1>
+    <div class="controls">
+        <button id="copyBtn">Copy Selected</button>
+        <button id="exportBtn">Export Selected (.txt)</button>
+        <button id="selectAllBtn">Select All</button>
+        <button id="deselectAllBtn">Deselect All</button>
+
+        <div class="delimiter-control">
+             <label for="delimiterSelect">Join with:</label>
+             <!-- === UPDATED OPTION VALUES === -->
+             <select id="delimiterSelect">
+                 <option value="\\n\\n" selected>Two Newlines</option> <!-- Literal \n\n -->
+                 <option value="\\n">Newline</option>          <!-- Literal \n -->
+                 <option value=" ">Space</option>              <!-- Space is fine -->
+                 <option value=", ">Comma + Space</option>      <!-- This is fine -->
+                 <option value=",">Comma</option>              <!-- This is fine -->
+                 <option value="\\t">Tab</option>              <!-- Literal \t -->
+                 <option value="">None (Concatenate)</option>   <!-- Empty string is fine -->
+             </select>
+             <!-- === END UPDATED VALUES === -->
+        </div>
+
+    </div>
+    <p class="instructions">Click rows to select/deselect. Shift+Click to select a range.</p>
+    <table id="resultsTable">
+        <thead>
+            <tr>
+                <th>Text Part</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Rows will be added here by JavaScript -->
+        </tbody>
+    </table>
+
+    <script src="results.js"></script>
+</body>
+</html>
