@@ -1,0 +1,51 @@
+body {
+    font-family: sans-serif;
+    padding: 20px;
+    min-width: 400px; /* Ensure some width */
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 1.4em;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.option-item {
+    margin-bottom: 25px;
+}
+
+.option-item label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.option-item select,
+.option-item input[type="checkbox"] {
+    margin-right: 5px;
+    vertical-align: middle; /* Align checkbox nicely with label text */
+}
+/* Make checkbox label clickable */
+.option-item label[for="downloadCodeToggle"] {
+    font-weight: normal;
+    display: inline-flex; /* Keep checkbox and text together */
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.description {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 5px;
+    margin-left: 5px; /* Indent slightly */
+}
+
+#status {
+    margin-top: 20px;
+    font-style: italic;
+    color: green;
+    display: none; /* Hidden by default */
+}

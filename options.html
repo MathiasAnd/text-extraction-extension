@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Element Text Extractor Options</title>
+    <link rel="stylesheet" href="options.css">
+</head>
+<body>
+    <h1>Element Text Extractor Options</h1>
+
+    <div class="option-item">
+        <label for="defaultModeSelect">Default Mode on Activation:</label>
+        <select id="defaultModeSelect">
+            <option value="standard">Standard Text Extraction</option>
+            <option value="code">Code Snippet Copy/Download</option>
+        </select>
+        <p class="description">Choose which mode the extension starts in when you click the icon.</p>
+    </div>
+
+    <div class="option-item">
+        <label for="downloadCodeToggle">
+            <input type="checkbox" id="downloadCodeToggle">
+            Directly Download Code Snippets (instead of copying)
+        </label>
+        <p class="description">If checked, clicking a code block in Code Mode will save it as a .txt file in your Downloads folder.</p>
+    </div>
+
+    <div id="status">Options saved.</div>
+
+    <script src="options.js"></script>
+</body>
+</html>
